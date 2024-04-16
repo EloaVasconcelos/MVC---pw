@@ -1,0 +1,52 @@
+CONTROLLER:
+using Microsoft.AspNetCore.Mvc;
+using Projeto3ds.Models;
+using System.Diagnostics;
+
+namespace Projeto3ds.Controllers
+{
+    public class HomeController : Controller
+    {
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+    }
+}
+-- apenas isso pra deixar na home controller --
+
+-- depois acrescentar o carrossel; 1 clicar no botao direito no shared,
+2 exibir, 3 view vazia, 4 mudar o nome pro carrossel --
+
+-- selecionar imgs --
+
+-- clicar com o botao direito na wwwroot e criar uma nova pasta "images" --
+-- jogar imgs na pasta images que criamos --
+
+-- pesquisar carrossel no bootstrap --
+
+-- carrossel ja alterado com as imagens --
+<div id="Carrossel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/images/macarrao2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/macarrao3.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/macarrao5.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+</div>
+
+*partial = view parcial, a view carrossel vai ser uma view 
+compartilhada com outras views*
+
+-- cod na index para "chamar" --
+<h1>ViewIndex</h1>
+<partial name ="_Carrossel" />
+
+-- wwwroot --> pasta para estáticos --
